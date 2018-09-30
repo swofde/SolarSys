@@ -1,10 +1,10 @@
 package com.mygdx.game;
 
 public class Point3D {
-    float x;
-    float y;
-    float z;
-    float angle;
+    private float x;
+    private float y;
+    private float z;
+    private float angle;
     public Point3D(float x, float y, float z, float angle)
     {
         this.x=x;

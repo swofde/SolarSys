@@ -7,13 +7,9 @@ public class Sun extends Body {
     public Sun(float radius, com.badlogic.gdx.graphics.Color color)
     {
         setRadius(radius);
-        setDistFromFather(0);
-        setFather(null);
         setColor(color);
         setCoord();
     }
-
-
     private void setCoord() {
         getCoord().setX(0f);
         getCoord().setY(0f);

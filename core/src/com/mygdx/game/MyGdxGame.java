@@ -75,16 +75,13 @@ public class MyGdxGame extends ApplicationAdapter {
 		Gdx.input.setInputProcessor(stage);
 		button1 = new ImageButton(mySkin);
 		button1.setSize(col_width*4,(float)(row_height*2.5));
-
 		button1.setPosition(col_width,Gdx.graphics.getHeight()-row_height*2.8f);
 		button1.addListener(new InputListener(){
 			@Override
 			public void touchUp (InputEvent event, float x, float y, int pointer, int button) {
-
 			}
 			@Override
 			public boolean touchDown (InputEvent event, float x, float y, int pointer, int button) {
-
 				return true;
 			}
 		});
@@ -153,9 +150,9 @@ public class MyGdxGame extends ApplicationAdapter {
 	public void update()	{
 
 		if(button1.isChecked()) {
-			earth.setCoord(earth.getFather().getCoord(), earth.getCoord().getAngle() + 0.01f);
-			nPlanet.setCoord(nPlanet.getFather().getCoord(), nPlanet.getCoord().getAngle() + 0.08f);
-			mPlanet.setCoord(mPlanet.getFather().getCoord(), mPlanet.getCoord().getAngle() + 0.04f);
+			earth.InitOrChangePos(earth.getCoord().getAngle() + 0.01f);
+			nPlanet.InitOrChangePos(nPlanet.getCoord().getAngle() + 0.08f);
+			mPlanet.InitOrChangePos(mPlanet.getCoord().getAngle() + 0.04f);
 
 			earth.getModelInstance().transform.setToTranslation(earth.getCoord().getX(), earth.getCoord().getY(), earth.getCoord().getZ());
 			nPlanet.getModelInstance().transform.setToTranslation(nPlanet.getCoord().getX(), nPlanet.getCoord().getY(), nPlanet.getCoord().getZ());
